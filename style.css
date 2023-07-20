@@ -1,0 +1,16 @@
+#etch-sketch {
+     display:flex;
+     flex-direction:column;
+     border:1px solid black;
+     width:960px;
+     height:960px;
+}
+
+.row-grid {
+     flex:auto;
+     display:flex;
+}
+
+.square {
+     flex:auto;
+}
