@@ -24,7 +24,7 @@ function randomColorEtch (e) {
      e.preventDefault();
 
      // Generate random numbers and use them for background RGB colors
-     let rgb = new Array(Math.floor(Math.random()*257), Math.floor(Math.random()*257), Math.floor(Math.random()*257));
+     let rgb = new Array(Math.floor(Math.random()*256), Math.floor(Math.random()*256), Math.floor(Math.random()*256));
      if (e.target.id != 'etch-sketch' && e.buttons === 1){
           e.target.style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
      }
