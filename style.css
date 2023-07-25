@@ -35,8 +35,8 @@ body, input, textarea, button {
      display:flex;
      flex-direction:column;
      border:1px solid black;
-     width:800px;
-     height:800px;
+     width:600px;
+     height:600px;
 }
 
 #main-box {

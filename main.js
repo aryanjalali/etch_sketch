@@ -60,10 +60,7 @@ function changeToBlack (e) {
           etchSketch.addEventListener('mouseover', blackColorEtch);
           etchSketch.addEventListener('mousedown', blackColorEtch);
 
-          while (etchSketch.hasChildNodes()) {
-               etchSketch.removeChild(etchSketch.firstChild);
-          };
-          fillEtch(gridSize);
+          resetEtch();
      };     
 }
 
@@ -76,10 +73,7 @@ function changeToRainbow (e) {
           etchSketch.addEventListener('mouseover', randomColorEtch);
           etchSketch.addEventListener('mousedown', randomColorEtch);
 
-          while (etchSketch.hasChildNodes()) {
-               etchSketch.removeChild(etchSketch.firstChild);
-          };
-          fillEtch(gridSize);
+          resetEtch();
      };     
 }
 
@@ -90,10 +84,7 @@ function resizeEtch (e){
      if (Number.isInteger(userSize) && userSize >= 4 && userSize <= 100) {
           gridSize = userSize;
           
-          while (etchSketch.hasChildNodes()) {
-               etchSketch.removeChild(etchSketch.firstChild);
-          };
-          fillEtch(gridSize);
+          resetEtch();
      } else {
           let errorMessageArea = document.querySelector('#error-msg');
 
@@ -104,4 +95,11 @@ function resizeEtch (e){
                errorMessageArea.classList.remove('error');
           }, 10000);
      };
+}
+
+function resetEtch(){
+     while (etchSketch.hasChildNodes()) {
+          etchSketch.removeChild(etchSketch.firstChild);
+     };
+     fillEtch(gridSize);
 }
