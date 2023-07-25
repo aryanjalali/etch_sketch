@@ -17,6 +17,12 @@ body, input, textarea, button {
      border-radius:5px;
 }
 
+.error {
+     background: orangered;
+     color: #fff;
+     padding:2px;
+}
+
 /* Header */
 #main-header {
      text-align:center;
