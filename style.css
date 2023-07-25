@@ -35,14 +35,14 @@ body, input, textarea, button {
      display:flex;
      flex-direction:column;
      border:1px solid black;
-     width:700px;
-     height:700px;
+     width:800px;
+     height:800px;
 }
 
 #main-box {
      display:flex;
-     justify-content:space-around;
      gap:20px;
+     justify-content:center;
 }
 
 #options {
@@ -82,4 +82,20 @@ body, input, textarea, button {
      color:white;
      border-radius:5px;
      background-image:linear-gradient(150deg, red, blue); 
+}
+
+@media (max-width:1200px){
+     #options > * {
+          margin: 0px 0px;
+     }
+
+     #options {
+          display:flex;
+          gap:10px;
+     }
+
+     #main-box {
+          flex-wrap:wrap;
+          justify-content:center;
+     }
 }
